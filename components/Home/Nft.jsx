@@ -6,7 +6,7 @@ import "swiper/css";
 
 export default function Nft() {
   return (
-    <div className="container space-y-12">
+    <div className="container space-y-12" id="works">
       <article className="flex justify-center lg:justify-end gap-8 items-center uppercase text-2xl lg:text-4xl font-bold">
         <h1 className="lin">Recent Nft</h1>
         <img src="/line.png" alt="line" className="inline" />

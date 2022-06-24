@@ -1,14 +1,20 @@
 import Head from "next/head";
 import { useTheme } from "next-themes";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import HomeEntry from "../components/Home/HomeEntry";
 import { ThemeContext } from "../contexts/ThemeContext";
+import PreLoad from "../components/PreLoad";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
     setTheme("dark");
+
+    setTimeout(() => {
+      setLoad(false);
+    }, 3000);
   }, []);
 
   return (
@@ -19,11 +25,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ThemeContext.Provider value={{ theme, setTheme }}>
-        <main className="dark:bg-black bg-slate-50 min-h-screen">
-          <HomeEntry />
-        </main>
-      </ThemeContext.Provider>
+      {load ? (
+        <PreLoad />
+      ) : (
+        <ThemeContext.Provider value={{ theme, setTheme }}>
+          <main className="dark:bg-black bg-slate-50 min-h-screen">
+            <HomeEntry />
+          </main>
+        </ThemeContext.Provider>
+      )}
     </div>
   );
 }

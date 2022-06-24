@@ -3,7 +3,7 @@ import { FiDownload } from "react-icons/fi";
 
 export default function Contribution() {
   return (
-    <div className="container space-y-12">
+    <div className="container space-y-12" id="contribution">
       <article className="flex justify-center lg:justify-start gap-8 items-center uppercase text-xl md:text-4xl font-bold">
         <h1 className="lin">Contribution</h1>
         <img src="/line.png" alt="line" className="inline" />

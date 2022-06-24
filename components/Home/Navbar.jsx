@@ -23,10 +23,21 @@ export default function Navbar() {
         <img src="/lightlogo.png" alt="logo" className="dark:hidden" />
 
         <ul className="hidden lg:flex justify-between gap-8 uppercase items-center pt-2 cursor-pointer">
-          <li>Works</li>
-          <li>Contribution</li>
-          <li>Community</li>
-          <li>Get in Touch</li>
+          <a href="#works">
+            <li>Works</li>
+          </a>
+
+          <a href="#contribution">
+            <li>Contribution</li>
+          </a>
+
+          <a href="#contact">
+            <li>Community</li>
+          </a>
+
+          <a href="#contact">
+            <li>Get in Touch</li>
+          </a>
 
           {theme === "light" ? (
             <FiMoon className="text-2xl" onClick={ToggleTheme} />
@@ -54,11 +65,23 @@ export default function Navbar() {
       </nav>
 
       {nav && (
-        <ul className="flex flex-col justify-between items-center text-3xl uppercase cursor-pointer gap-12 lin">
-          <li>Works</li>
-          <li>Contribution</li>
-          <li>Community</li>
-          <li>Get in Touch</li>
+        <ul className="flex flex-col justify-between items-center text-2xl md:text-3xl uppercase gap-12 lin">
+          <a href="#works" onClick={ToggleNav}>
+            <li>Works</li>
+          </a>
+
+          <a href="#contribution" onClick={ToggleNav}>
+            <li>Contribution</li>
+          </a>
+
+          <a href="#contribution" onClick={ToggleNav}>
+            <li>Community</li>
+          </a>
+
+          <a href="#contact" onClick={ToggleNav}>
+            <li>Get in Touch</li>
+          </a>
+
           {theme === "light" ? (
             <FiMoon className="text-6xl" onClick={ToggleTheme} />
           ) : (
