@@ -13,12 +13,16 @@ export default function HomeEntry() {
       <section className="space-y-28">
         <div className="dark:bg-[url('/Background.png')] bg-[url('/LB.png')]  bg no-repeat bg-cover space-y-12 lg:space-y-28">
           <Navbar />
-          <Hero />
+          {nav ? null : <Hero />}
         </div>
 
-        <Nft />
-        <Contribution />
-        <Footer />
+        {nav ? null : (
+          <div className="space-y-28">
+            <Nft />
+            <Contribution />
+            <Footer />
+          </div>
+        )}
       </section>
     </NavContext.Provider>
   );

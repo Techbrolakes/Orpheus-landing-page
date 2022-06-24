@@ -102,6 +102,12 @@ $primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
     background-image: linear-gradient(to right, #ffcd74, #bf841a, #ffe5a1);
     color: #0a0c10;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 
 .btn-outline {
@@ -119,5 +125,11 @@ $primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
   &:hover {
     background-image: linear-gradient(to right, #000, #ffcd74, #ffcd74);
     color: #0a0c10;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-weight: 500;
   }
 }

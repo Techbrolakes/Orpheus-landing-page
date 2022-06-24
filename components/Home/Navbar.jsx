@@ -39,7 +39,7 @@ export default function Navbar() {
           {theme === "light" ? (
             <FiMoon className="text-3xl" onClick={ToggleTheme} />
           ) : (
-            <FiSun className="text-3xl" onClick={ToggleTheme} />
+            <FiSun className="text-3xl text-[#D9A23F]" onClick={ToggleTheme} />
           )}
 
           {nav ? (
@@ -52,6 +52,20 @@ export default function Navbar() {
           )}
         </ul>
       </nav>
+
+      {nav && (
+        <ul className="flex flex-col justify-between items-center text-3xl uppercase cursor-pointer gap-12 lin">
+          <li>Works</li>
+          <li>Contribution</li>
+          <li>Community</li>
+          <li>Get in Touch</li>
+          {theme === "light" ? (
+            <FiMoon className="text-6xl" onClick={ToggleTheme} />
+          ) : (
+            <FiSun className="text-6xl text-[#D9A23F]" onClick={ToggleTheme} />
+          )}
+        </ul>
+      )}
     </>
   );
 }
