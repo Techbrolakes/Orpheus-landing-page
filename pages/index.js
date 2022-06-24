@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
 
       <ThemeContext.Provider value={{ theme, setTheme }}>
-        <main className="dark:bg-black bg-white min-h-screen">
+        <main className="dark:bg-black bg-slate-50 min-h-screen">
           <HomeEntry />
         </main>
       </ThemeContext.Provider>

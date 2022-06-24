@@ -9,7 +9,7 @@ export default function Hero() {
           <h1 className="cinzel">
             Yet the story of <span className="">Orpheus</span>
           </h1>
-          <p className="text-p tracking-wide">
+          <p className="text-p tracking-wide dark:text-[#eff3fb] text-black font-medium">
             Product & Graphic Designer, with experience in delivering end-to-end
             UX/UI design for software products.
           </p>
@@ -25,7 +25,12 @@ export default function Hero() {
         </div>
 
         <div>
-          <img src="full-hero.png" alt="image" className="w-fit" />
+          <img
+            src="full-hero.png"
+            alt="image"
+            className="hidden dark:inline-block w-fit"
+          />
+          <img src="light-hero.png" alt="image" className="dark:hidden w-fit" />
         </div>
       </section>
     </div>

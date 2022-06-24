@@ -10,7 +10,7 @@ export default function Contribution() {
         <p className="text-xl font-light opacity-75">VIEW MORE</p>
       </article>
 
-      <main className="bg-[#121416] grid grid-cols-2 gap-8 items-center">
+      <main className="bg-[#E0E0E0] dark:bg-[#121416] grid grid-cols-2 gap-8 items-center">
         <div>
           <img src="/pic.png" alt="picture" />
         </div>
@@ -28,7 +28,7 @@ export default function Contribution() {
         </div>
       </main>
 
-      <main className="bg-[#121416] grid grid-cols-2 gap-8 items-center">
+      <main className="bg-gradient-to-r from-primary to-secondary dark:bg-gradient-to-r dark:from-tertiary dark:to-tertiary grid grid-cols-2 gap-8 items-center">
         <div className="text-center px-4 space-y-4">
           <h1 className="lin text-[40px] uppercase font-bold">
             Greek Statue Avatars
@@ -41,10 +41,19 @@ export default function Contribution() {
               <FiDownload className="inline mr-2" />
             </span>
             Download
-          </button>{" "}
+          </button>
         </div>
         <div>
-          <img src="/pic2.png" alt="picture" />
+          <img
+            src="/pic2.png"
+            alt="picture"
+            className="hidden dark:inline-block w-fit"
+          />
+          <img
+            src="/light-pic2.png"
+            alt="picture"
+            className="dark:hidden w-fit"
+          />
         </div>
       </main>
     </div>

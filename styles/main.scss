@@ -22,7 +22,7 @@ $primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
 }
 
 .border-b {
-  border-bottom: 2px solid #0a0c10;
+  border-bottom: 2px solid;
 }
 
 .d3 {
@@ -47,7 +47,6 @@ $primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
 }
 
 .text-p {
-  color: #eff3fb;
   line-height: 3rem;
   font-size: 24px;
   font-weight: 100;
