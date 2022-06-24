@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import HomeEntry from "../components/Home/HomeEntry";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -10,9 +11,6 @@ export default function Home() {
     setTheme("dark");
   }, []);
 
-  const ToggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
   return (
     <div>
       <Head>
@@ -21,9 +19,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="dark:bg-black bg-white min-h-screen">
-        <HomeEntry />
-      </main>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <main className="dark:bg-black bg-white min-h-screen">
+          <HomeEntry />
+        </main>
+      </ThemeContext.Provider>
     </div>
   );
 }

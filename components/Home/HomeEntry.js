@@ -7,12 +7,15 @@ import Nft from "./Nft";
 
 export default function HomeEntry() {
   return (
-    <div className="bg-[url('/Background.png')]  bg no-repeat bg-cover space-y-28">
-      <Navbar />
-      <Hero />
+    <section className="space-y-28">
+      <div className="bg-[url('/Background.png')]  bg no-repeat bg-cover space-y-28">
+        <Navbar />
+        <Hero />
+      </div>
+
       <Nft />
       <Contribution />
       <Footer />
-    </div>
+    </section>
   );
 }
