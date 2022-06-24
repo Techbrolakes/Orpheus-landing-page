@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700;800&display=swap");
+
+$primary-font: "Montserrat", sans-serif;
+$primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
+
+@mixin text-linear() {
+  background: -webkit-linear-gradient(#ffe5a1, #bf841a, #ffcd74);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+* {
+  font-family: $primary-font;
+}
+.container {
+  padding: 0 3rem;
+}
+.lin {
+  @include text-linear();
+}
+
+.border-b {
+  border-bottom: 2px solid #0a0c10;
+}
+
+.d3 {
+  font-size: 42px;
+}
+
+.linear {
+  color: #ffe5a1;
+}
+.cinzel {
+  font-family: "Cinzel", serif;
+  font-size: 74px;
+  font-weight: 500;
+  @include text-linear();
+  text-transform: uppercase;
+
+  span {
+    font-family: "Cinzel", serif;
+    font-weight: 800;
+    letter-spacing: 3rem;
+  }
+}
+
+.text-p {
+  color: #eff3fb;
+  line-height: 3rem;
+  font-size: 24px;
+  font-weight: 100;
+  width: 80%;
+  text-transform: capitalize;
+}
+
+.img {
+  width: 800px;
+}
+
+.btn-fill {
+  background-image: $primary-gradient;
+  color: #0a0c10;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 100px;
+
+  &:hover {
+    background-image: linear-gradient(to right, #ffcd74, #bf841a, #ffe5a1);
+    color: #0a0c10;
+  }
+}
+
+.btn-outline {
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500px;
+  @include text-linear();
+  box-sizing: content-box;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #ffcd74, #ffcd74, #000);
+  border-image-slice: 1;
+
+  &:hover {
+    background-image: linear-gradient(to right, #000, #ffcd74, #ffcd74);
+    color: #0a0c10;
+  }
+}
