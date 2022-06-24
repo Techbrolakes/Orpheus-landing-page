@@ -18,7 +18,10 @@ export default function Navbar() {
   };
   return (
     <>
-      <nav className="shadow-xl border-b-2 dark:border-[#0a0c10] border-slate-100 flex justify-between items-center py-4 px-4 lg:px-12">
+      <nav
+        className="shadow-xl border-b-2 dark:border-[#0a0c10] border-slate-100 flex justify-between items-center py-4 px-4 lg:px-12"
+        data-aos="fade-in"
+      >
         <img src="/Logo.png" alt="logo" className="hidden dark:inline-block" />
         <img src="/lightlogo.png" alt="logo" className="dark:hidden" />
 

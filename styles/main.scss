@@ -133,3 +133,12 @@ $primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
     font-weight: 500;
   }
 }
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffcd74;
+}

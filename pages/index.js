@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import HomeEntry from "../components/Home/HomeEntry";
 import { ThemeContext } from "../contexts/ThemeContext";
 import PreLoad from "../components/PreLoad";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -11,6 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     setTheme("dark");
+    AOS.init({ duration: "1000" });
 
     setTimeout(() => {
       setLoad(false);
@@ -29,7 +32,10 @@ export default function Home() {
         <PreLoad />
       ) : (
         <ThemeContext.Provider value={{ theme, setTheme }}>
-          <main className="dark:bg-black bg-slate-50 min-h-screen">
+          <main
+            className="dark:bg-black bg-slate-50 min-h-screen"
+            data-aos="fade-in"
+          >
             <HomeEntry />
           </main>
         </ThemeContext.Provider>

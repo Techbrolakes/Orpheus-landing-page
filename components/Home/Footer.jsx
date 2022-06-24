@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="container py-2" id="contact">
+    <div className="container py-2" id="contact" data-aos="fade-down">
       <section className="text-center space-y-4">
         <h1 className="lin d3 uppercase font-bold">Let&rsquo;s Connect</h1>
         <p className="text-sm md:text-lg lg:text-xl xl:text-2xl  tracking-wide uppercase font-light opacity-90">
