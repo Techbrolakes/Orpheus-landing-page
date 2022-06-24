@@ -1,13 +1,20 @@
 import { useContext } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
+import { FaTimes } from "react-icons/fa";
+import { NavContext } from "../../contexts/NavContext";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
 export default function Navbar() {
   const { theme, setTheme } = useContext(ThemeContext);
+  const { nav, setNav } = useContext(NavContext);
 
   const ToggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  const ToggleNav = () => {
+    setNav(!nav);
   };
   return (
     <>
@@ -28,8 +35,21 @@ export default function Navbar() {
           )}
         </ul>
 
-        <ul className="block lg:hidden">
-          <RiBarChartHorizontalLine className="text-3xl cursor-pointer" />
+        <ul className="flex gap-4 items-center lg:hidden">
+          {theme === "light" ? (
+            <FiMoon className="text-3xl" onClick={ToggleTheme} />
+          ) : (
+            <FiSun className="text-3xl" onClick={ToggleTheme} />
+          )}
+
+          {nav ? (
+            <FaTimes className="text-3xl cursor-pointer" onClick={ToggleNav} />
+          ) : (
+            <RiBarChartHorizontalLine
+              className="text-3xl cursor-pointer"
+              onClick={ToggleNav}
+            />
+          )}
         </ul>
       </nav>
     </>
