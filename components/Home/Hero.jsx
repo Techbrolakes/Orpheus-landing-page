@@ -4,7 +4,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 export default function Hero() {
   return (
     <div className="container">
-      <section className="grid grid-cols-3  gap-4">
+      <section className="block py-4 lg:grid grid-cols-3  gap-4 text-center lg:text-left">
         <div className="col-span-2 space-y-2">
           <h1 className="cinzel">
             Yet the story of <span className="">Orpheus</span>
@@ -24,13 +24,13 @@ export default function Hero() {
           </button>
         </div>
 
-        <div>
+        <div className="hidden lg:block">
           <img
             src="full-hero.png"
             alt="image"
-            className="hidden dark:inline-block w-fit"
+            className="hidden dark:inline-block"
           />
-          <img src="light-hero.png" alt="image" className="dark:hidden w-fit" />
+          <img src="light-hero.png" alt="image" className="dark:hidden" />
         </div>
       </section>
     </div>

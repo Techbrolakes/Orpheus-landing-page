@@ -16,6 +16,13 @@ $primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
 }
 .container {
   padding: 0 3rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
+  }
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    padding: 0 2rem;
+  }
 }
 .lin {
   @include text-linear();
@@ -27,6 +34,13 @@ $primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
 
 .d3 {
   font-size: 42px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    font-size: 22px;
+  }
 }
 
 .linear {
@@ -43,6 +57,14 @@ $primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
     font-family: "Cinzel", serif;
     font-weight: 800;
     letter-spacing: 3rem;
+
+    @media screen and (max-width: 768px) {
+      letter-spacing: 0.5rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
   }
 }
 
@@ -52,6 +74,16 @@ $primary-gradient: linear-gradient(to right, #ffe5a1, #bf841a, #ffcd74);
   font-weight: 100;
   width: 80%;
   text-transform: capitalize;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    line-height: 2rem;
+    font-size: 16px;
+  }
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    width: 100%;
+    font-size: 24px;
+  }
 }
 
 .img {
